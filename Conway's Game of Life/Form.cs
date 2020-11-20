@@ -378,5 +378,11 @@ namespace Conway_s_Game_of_Life
 
             return handled;
         }
+
+        private void Form_Resize(object sender, EventArgs e)
+        {
+            //Redraw bitmap if bitmap resizing is set
+            if (resize_to_fit) draw_resized();
+        }
     }
 }

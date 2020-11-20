@@ -153,6 +153,7 @@
             this.ShowIcon = false;
             this.Text = "Conway\'s Game of Life";
             this.Load += new System.EventHandler(this.Form_Load);
+            this.Resize += new System.EventHandler(this.Form_Resize);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGrid)).EndInit();
