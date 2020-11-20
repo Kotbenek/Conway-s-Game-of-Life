@@ -371,6 +371,9 @@ namespace Conway_s_Game_of_Life
                         handled = true;
                     }
                     break;
+                default:
+                    handled = base.ProcessCmdKey(ref msg, keyData);
+                    break;
             }
 
             return handled;
