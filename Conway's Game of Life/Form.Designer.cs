@@ -38,6 +38,7 @@
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.picGrid = new System.Windows.Forms.PictureBox();
             this.tmrStep = new System.Windows.Forms.Timer(this.components);
+            this.nextStepToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGrid)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +74,7 @@
             this.simulationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.startToolStripMenuItem,
             this.stopToolStripMenuItem,
+            this.nextStepToolStripMenuItem,
             this.settingsToolStripMenuItem});
             this.simulationToolStripMenuItem.Name = "simulationToolStripMenuItem";
             this.simulationToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
@@ -82,7 +84,7 @@
             // 
             this.startToolStripMenuItem.Enabled = false;
             this.startToolStripMenuItem.Name = "startToolStripMenuItem";
-            this.startToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.startToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.startToolStripMenuItem.Text = "Start";
             this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
             // 
@@ -90,14 +92,14 @@
             // 
             this.stopToolStripMenuItem.Enabled = false;
             this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.stopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.stopToolStripMenuItem.Text = "Stop";
             this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
@@ -114,6 +116,14 @@
             // 
             this.tmrStep.Interval = 50;
             this.tmrStep.Tick += new System.EventHandler(this.tmrStep_Tick);
+            // 
+            // nextStepToolStripMenuItem
+            // 
+            this.nextStepToolStripMenuItem.Enabled = false;
+            this.nextStepToolStripMenuItem.Name = "nextStepToolStripMenuItem";
+            this.nextStepToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nextStepToolStripMenuItem.Text = "Next step";
+            this.nextStepToolStripMenuItem.Click += new System.EventHandler(this.nextStepToolStripMenuItem_Click);
             // 
             // Form
             // 
@@ -146,6 +156,7 @@
         private System.Windows.Forms.PictureBox picGrid;
         private System.Windows.Forms.ToolStripMenuItem loadFromImageToolStripMenuItem;
         public System.Windows.Forms.Timer tmrStep;
+        private System.Windows.Forms.ToolStripMenuItem nextStepToolStripMenuItem;
     }
 }
 

@@ -210,7 +210,11 @@ namespace Conway_s_Game_of_Life
                     MessageBox.Show(ex.Message.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                if (x > 0 && y > 0) startToolStripMenuItem.Enabled = true;
+                if (x > 0 && y > 0)
+                {
+                    startToolStripMenuItem.Enabled = true;
+                    nextStepToolStripMenuItem.Enabled = true;
+                }
             }
         }
 
@@ -237,6 +241,7 @@ namespace Conway_s_Game_of_Life
         {
             tmrStep.Start();
             startToolStripMenuItem.Enabled = false;
+            nextStepToolStripMenuItem.Enabled = false;
             stopToolStripMenuItem.Enabled = true;
         }
 
@@ -244,7 +249,13 @@ namespace Conway_s_Game_of_Life
         {
             tmrStep.Stop();
             startToolStripMenuItem.Enabled = true;
+            nextStepToolStripMenuItem.Enabled = true;
             stopToolStripMenuItem.Enabled = false;
+        }
+
+        private void nextStepToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tmrStep_Tick(sender, e);
         }
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -314,6 +325,6 @@ namespace Conway_s_Game_of_Life
                 MessageBox.Show(ex.Message.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             draw();
-        }
+        }                
     }
 }
