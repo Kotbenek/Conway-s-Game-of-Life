@@ -143,13 +143,6 @@
         tkpntUpntUpntUpntUpntUpntUpntW8kB8dXR9HPbaG2AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="nextStepToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAwSURBVDhPYxgFgxs0/EfFJAFsGpDF8BqITxIkB8NYAV6T
-        gQCvAaRoJqR2FJAAGBgA6hEd7RP5FhoAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="settingsToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -160,4 +153,11 @@
   <metadata name="tmrStep.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>
+  <data name="nextStepToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAwSURBVDhPYxgFgxs0/EfFJAFsGpDF8BqITxIkB8NYAV6T
+        gQCvAaRoJqR2FJAAGBgA6hEd7RP5FhoAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>
