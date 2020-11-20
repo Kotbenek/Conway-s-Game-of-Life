@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadFromImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,6 +65,8 @@
             // 
             // loadFromImageToolStripMenuItem
             // 
+            this.loadFromImageToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("loadFromImageToolStripMenuItem.Image")));
+            this.loadFromImageToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
             this.loadFromImageToolStripMenuItem.Name = "loadFromImageToolStripMenuItem";
             this.loadFromImageToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+O";
             this.loadFromImageToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
@@ -84,6 +87,8 @@
             // startToolStripMenuItem
             // 
             this.startToolStripMenuItem.Enabled = false;
+            this.startToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("startToolStripMenuItem.Image")));
+            this.startToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
             this.startToolStripMenuItem.Name = "startToolStripMenuItem";
             this.startToolStripMenuItem.ShortcutKeyDisplayString = "F5";
             this.startToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
@@ -93,6 +98,8 @@
             // stopToolStripMenuItem
             // 
             this.stopToolStripMenuItem.Enabled = false;
+            this.stopToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("stopToolStripMenuItem.Image")));
+            this.stopToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
             this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
             this.stopToolStripMenuItem.ShortcutKeyDisplayString = "F6";
             this.stopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
@@ -101,6 +108,8 @@
             // 
             // settingsToolStripMenuItem
             // 
+            this.settingsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("settingsToolStripMenuItem.Image")));
+            this.settingsToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+S";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
@@ -124,6 +133,8 @@
             // nextStepToolStripMenuItem
             // 
             this.nextStepToolStripMenuItem.Enabled = false;
+            this.nextStepToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("nextStepToolStripMenuItem.Image")));
+            this.nextStepToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
             this.nextStepToolStripMenuItem.Name = "nextStepToolStripMenuItem";
             this.nextStepToolStripMenuItem.ShortcutKeyDisplayString = "F7";
             this.nextStepToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
