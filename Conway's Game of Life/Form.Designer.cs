@@ -65,7 +65,8 @@
             // loadFromImageToolStripMenuItem
             // 
             this.loadFromImageToolStripMenuItem.Name = "loadFromImageToolStripMenuItem";
-            this.loadFromImageToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.loadFromImageToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+O";
+            this.loadFromImageToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.loadFromImageToolStripMenuItem.Text = "Load from image";
             this.loadFromImageToolStripMenuItem.Click += new System.EventHandler(this.loadFromImageToolStripMenuItem_Click);
             // 
@@ -84,6 +85,7 @@
             // 
             this.startToolStripMenuItem.Enabled = false;
             this.startToolStripMenuItem.Name = "startToolStripMenuItem";
+            this.startToolStripMenuItem.ShortcutKeyDisplayString = "F5";
             this.startToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.startToolStripMenuItem.Text = "Start";
             this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
@@ -92,6 +94,7 @@
             // 
             this.stopToolStripMenuItem.Enabled = false;
             this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
+            this.stopToolStripMenuItem.ShortcutKeyDisplayString = "F6";
             this.stopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.stopToolStripMenuItem.Text = "Stop";
             this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
@@ -99,6 +102,7 @@
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+S";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
@@ -121,6 +125,7 @@
             // 
             this.nextStepToolStripMenuItem.Enabled = false;
             this.nextStepToolStripMenuItem.Name = "nextStepToolStripMenuItem";
+            this.nextStepToolStripMenuItem.ShortcutKeyDisplayString = "F7";
             this.nextStepToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nextStepToolStripMenuItem.Text = "Next step";
             this.nextStepToolStripMenuItem.Click += new System.EventHandler(this.nextStepToolStripMenuItem_Click);

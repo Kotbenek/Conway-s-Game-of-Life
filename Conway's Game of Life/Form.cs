@@ -324,7 +324,56 @@ namespace Conway_s_Game_of_Life
             {
                 MessageBox.Show(ex.Message.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            draw();
-        }                
+            if (bitmap != null) draw();
+        }
+
+        /// <summary>
+        /// Keyboard handling
+        /// </summary>
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            bool handled = false;
+
+            switch (keyData)
+            {
+                case Keys.Control | Keys.O:
+                    if (loadFromImageToolStripMenuItem.Enabled)
+                    {
+                        loadFromImageToolStripMenuItem_Click(this, null);
+                        handled = true;
+                    }
+                    break;
+                case Keys.F5:
+                    if (startToolStripMenuItem.Enabled)
+                    {
+                        startToolStripMenuItem_Click(this, null);
+                        handled = true;
+                    }
+                    break;
+                case Keys.F6:
+                    if (stopToolStripMenuItem.Enabled)
+                    {
+                        stopToolStripMenuItem_Click(this, null);
+                        handled = true;
+                    }
+                    break;
+                case Keys.F7:
+                    if (nextStepToolStripMenuItem.Enabled)
+                    {
+                        nextStepToolStripMenuItem_Click(this, null);
+                        handled = true;
+                    }
+                    break;
+                case Keys.Control | Keys.S:
+                    if (settingsToolStripMenuItem.Enabled)
+                    {
+                        settingsToolStripMenuItem_Click(this, null);
+                        handled = true;
+                    }
+                    break;
+            }
+
+            return handled;
+        }
     }
 }
