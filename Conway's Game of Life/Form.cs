@@ -13,9 +13,9 @@ using System.Runtime.InteropServices;
 
 namespace Conway_s_Game_of_Life
 {
-    public partial class Form1 : Form
+    public partial class Form : System.Windows.Forms.Form
     {
-        public Form1()
+        public Form()
         {
             InitializeComponent();
         }
@@ -29,6 +29,10 @@ namespace Conway_s_Game_of_Life
         Bitmap bitmap;
         Bitmap bitmap_resized;
         Rectangle b_rectangle;
+        public bool resize_to_fit = true;
+
+        //Constants
+        public const string SETTINGS_FILE = "settings.ini";
 
         /// <summary>
         /// Function calculating next grid state
@@ -39,6 +43,7 @@ namespace Conway_s_Game_of_Life
         /// <param name="y">Height of the array</param>
         void calculate(byte[][] array_input, byte[][] array_output, int x, int y)
         {
+            //Using parallel computation to increase speed
             Parallel.For(1, x - 1, i =>
             {
                 for (int j = 1; j < y - 1; j++)
@@ -109,8 +114,10 @@ namespace Conway_s_Game_of_Life
                 }
                 bitmap.UnlockBits(data);
             }
-            //Draw the resized bitmap
-            draw_resized();
+
+            //Draw bitmap
+            if (resize_to_fit) draw_resized();
+            else picGrid.Image = bitmap;            
         }
 
         /// <summary>
@@ -242,7 +249,71 @@ namespace Conway_s_Game_of_Life
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not yet implemented!");
+            Settings settings = new Settings(this);
+            settings.ShowDialog();
+        }
+
+        private void Form_Load(object sender, EventArgs e)
+        {
+            //Load configuration
+
+            //Check if configuration file exists
+            if (File.Exists(SETTINGS_FILE))
+            {
+                load_settings();
+            }
+            //File doesn't exist, it needs to be created
+            else
+            {
+                save_settings();
+            }
+        }
+
+        /// <summary>
+        /// Function handling loading settings from file
+        /// </summary>
+        public void load_settings()
+        {
+            try
+            {
+                using (StreamReader sr = new StreamReader(SETTINGS_FILE))
+                {
+                    int data = tmrStep.Interval;
+                    int.TryParse(sr.ReadLine(), out data);
+                    tmrStep.Interval = data;
+
+                    data = 1;
+                    int.TryParse(sr.ReadLine(), out data);
+                    if (data == 1) resize_to_fit = true;
+                    else resize_to_fit = false;
+                }
+            }
+            //Error handling
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Function handling saving settings to file
+        /// </summary>
+        public void save_settings()
+        {
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(SETTINGS_FILE, false))
+                {
+                    sw.WriteLine(tmrStep.Interval);
+                    sw.WriteLine(resize_to_fit ? 1 : 0);
+                }
+            }
+            //Error handling
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            draw();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Conway_s_Game_of_Life
 {
-    partial class Form1
+    partial class Form
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -64,7 +64,7 @@
             // loadFromImageToolStripMenuItem
             // 
             this.loadFromImageToolStripMenuItem.Name = "loadFromImageToolStripMenuItem";
-            this.loadFromImageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadFromImageToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.loadFromImageToolStripMenuItem.Text = "Load from image";
             this.loadFromImageToolStripMenuItem.Click += new System.EventHandler(this.loadFromImageToolStripMenuItem_Click);
             // 
@@ -82,7 +82,7 @@
             // 
             this.startToolStripMenuItem.Enabled = false;
             this.startToolStripMenuItem.Name = "startToolStripMenuItem";
-            this.startToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.startToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.startToolStripMenuItem.Text = "Start";
             this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
             // 
@@ -90,14 +90,14 @@
             // 
             this.stopToolStripMenuItem.Enabled = false;
             this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stopToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.stopToolStripMenuItem.Text = "Stop";
             this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
@@ -115,7 +115,7 @@
             this.tmrStep.Interval = 50;
             this.tmrStep.Tick += new System.EventHandler(this.tmrStep_Tick);
             // 
-            // Form1
+            // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -123,9 +123,10 @@
             this.Controls.Add(this.picGrid);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "Form";
             this.ShowIcon = false;
             this.Text = "Conway\'s Game of Life";
+            this.Load += new System.EventHandler(this.Form_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGrid)).EndInit();
@@ -143,8 +144,8 @@
         private System.Windows.Forms.ToolStripMenuItem stopToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.PictureBox picGrid;
-        private System.Windows.Forms.Timer tmrStep;
         private System.Windows.Forms.ToolStripMenuItem loadFromImageToolStripMenuItem;
+        public System.Windows.Forms.Timer tmrStep;
     }
 }
 
