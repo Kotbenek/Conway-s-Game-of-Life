@@ -1,3 +1,8 @@
+# Moved to Codeberg
+
+This repository was moved to Codeberg:
+https://codeberg.org/Kotbenek/Conway-s-Game-of-Life
+
 # Conway's Game of Life
 Conway's Game of Life is a Turing complete cellular automaton.
 
